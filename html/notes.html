@@ -1,0 +1,16 @@
+{{define "notes"}}
+    <div class="container my-3">
+
+    <a class="btn btn-outline-primary" href="/new_note" role="button">Новая заметка</a>
+
+    {{range .ListNotes}}
+    <div onclick="document.getElementById('myForm{{.Id}}').submit();" class="d-grid rounded position-relative my-3 " id="note">
+        <form id="myForm{{.Id}}" method="post" action="/note"><input type="hidden" name="note_id" value="{{.Id}}"></form>
+        <div class="py-3 px-3">
+        <div class="float-start">{{.Header}}</div>
+        <div class="float-end">{{.Date}}</div>
+        </div>
+    </div>
+    {{end}}
+    </div>
+{{end}}

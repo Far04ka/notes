@@ -1,0 +1,12 @@
+{{define "header"}}
+    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <span class="navbar-text m-3">
+            {{.UserName}}
+        </span>
+        <form action="/logout">
+            <button type="submit" class="btn btn-outline-danger px-3">
+                Выйти
+            </button>
+        </form>
+    </div>
+{{end}}
