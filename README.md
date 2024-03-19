@@ -1,4 +1,4 @@
 # notes
 ## Just a simple Notes app
-Backend : net/http + gorilla/mux  
+Backend : net/http + gorilla/mux + MySQL
 Frontend : Bootstrap5
